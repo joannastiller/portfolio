@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  background: url("../images/header_mobile.jpg") no-repeat center/cover fixed;
+  color: #b3b3af;
+}
+
+@media (min-width: 576px) {
+  header {
+    background-image: url("../images/header.jpg");
+  }
+}
+
+header .burger {
+  display: block;
+  position: absolute;
+  top: 5vh;
+  right: 10vw;
+  font-size: 2em;
+  color: #fff;
+}
+
+@media (min-width: 576px) {
+  header .burger {
+    right: 5vw;
+  }
+}
+
+@media (min-width: 768px) {
+  header .burger {
+    display: none;
+  }
+}
+
+header .header-text {
+  position: absolute;
+  top: 25vh;
+  left: 20vw;
+  right: 25vw;
+}
+
+@media (min-width: 576px) {
+  header .header-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 8vh;
+    left: 15vw;
+  }
+}
+
+@media (min-width: 768px) {
+  header .header-text {
+    top: 6vh;
+    left: 12vw;
+  }
+}
+
+@media (min-width: 992px) {
+  header .header-text {
+    top: 12vh;
+    left: 13vw;
+  }
+}
+
+header .header-text nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  header .header-text nav {
+    display: block;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5em;
+    line-height: 1.6em;
+  }
+}
+
+@media (min-width: 992px) {
+  header .header-text nav {
+    font-size: 1.5em;
+  }
+}
+
+header .header-text nav ul {
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  header .header-text nav ul li:hover {
+    color: #b3b3af;
+    -webkit-transition: .3s;
+    transition: .3s;
+    cursor: pointer;
+  }
+}
+
+header .header-text .headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #fff;
+}
+
+@media (min-width: 576px) {
+  header .header-text .headline {
+    padding-left: 10vw;
+  }
+}
+
+@media (min-width: 768px) {
+  header .header-text .headline {
+    padding-top: 15vh;
+  }
+}
+
+@media (min-width: 992px) {
+  header .header-text .headline {
+    padding-left: 13vw;
+  }
+}
+
+header .header-text .headline h1 {
+  font-size: 4em;
+  line-height: 1em;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  header .header-text .headline h1 {
+    font-size: 6em;
+  }
+}
+
+header .header-text .headline h2 {
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 2em;
+}
+
+@media (min-width: 992px) {
+  header .header-text .headline h2 {
+    font-size: 3em;
+  }
+}
+
+.about {
+  height: 100vh;
+}
+/*# sourceMappingURL=style.css.map */
