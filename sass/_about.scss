@@ -1,3 +1,56 @@
 .about {
-    height: 100vh;
+    width: 80vw;
+    margin: 5vh auto;
+    color: $dark-gray;
+
+    @include sm {
+        width: 70%;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+
+    @include md {
+        width: 75%;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+
+    @include lg {
+        width: 60%;
+        margin-top: 8vh;
+        margin-bottom: 8vh;
+    }
+
+    h1 {
+        margin-bottom: 3vh;
+        text-align: center;
+        font-family: 'Mr Dafoe', cursive;
+
+        @include sm {
+            margin-bottom: 5vh;
+        }
+
+        @include md {
+            margin-bottom: 2vh;
+            font-size: 1.8em;
+        }
+    }
+
+    p {
+        margin-bottom: 2vh;
+        font-family: $font-roboto;
+        line-height: 1.5em;
+
+        @include sm {
+            margin-bottom: 6vh;
+        }
+
+        @include md {
+            margin-bottom: 2vh;
+        }
+
+        @include lg {
+            line-height: 1.6em;
+        }
+    }
 }

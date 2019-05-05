@@ -8,6 +8,8 @@ header {
         background-image: url("../images/header.jpg");
     }
 
+    // Burger menu
+
     .burger {
         display: block;
         position: absolute;
@@ -24,6 +26,8 @@ header {
             display: none;
         }
     }
+
+    // Menu plus main writing
 
     .header-text {
 
@@ -44,7 +48,7 @@ header {
         }
 
         @include lg {
-            top: 12vh;
+            top: 13vh;
             left: 13vw;
         }
 
@@ -79,6 +83,8 @@ header {
             }
         }
 
+        // Main writing
+
         .headline {
             display: flex;
             flex-direction: column;
@@ -94,7 +100,8 @@ header {
             }
 
             @include lg {
-                padding-left: 13vw;
+                padding-top: 0;
+                padding-left: 15vw;
             }
 
             h1 {
