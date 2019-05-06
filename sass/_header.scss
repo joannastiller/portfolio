@@ -2,7 +2,7 @@ header {
     position: relative;
     height: 100vh;
     background: url("../images/header_mobile.jpg") no-repeat center/cover fixed;
-    color: $dark-gray;
+    color: $dark-grey;
 
     @include sm {
         background-image: url("../images/header.jpg");
@@ -74,7 +74,7 @@ header {
 
                     @include md {
                         &:hover {
-                            color: $dark-gray;
+                            color: $dark-grey;
                             transition: .3s;
                             cursor: pointer;
                         }

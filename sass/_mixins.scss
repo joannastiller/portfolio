@@ -32,3 +32,11 @@
         @content;
     }
 }
+
+// Section title
+@mixin title {
+    padding: 1vh 0 3vh;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Mr Dafoe', cursive;
+}

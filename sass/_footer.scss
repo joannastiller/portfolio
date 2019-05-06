@@ -1,0 +1,109 @@
+footer {
+    h1 {
+        @include title
+    }
+
+    padding: 5vh 0;
+    background-color: $pink;
+
+    form {
+        width: 70%;
+        margin: 0 auto;
+
+        textarea {
+            resize: none;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            background: none;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            border: none;
+            border-bottom: 1px solid $dark-grey;
+            font-family: $font-roboto;
+            font-size: .7em;
+        }
+    }
+
+    button {
+        position: relative;
+        display: block;
+        width: 70%;
+        margin: 3vh auto;
+        border: none;
+        padding: 2vh 10vw;
+        overflow: hidden;
+        background-color: black;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: $font-oswald;
+        letter-spacing: 1px;
+
+        &::before {
+            position: absolute;
+            content: "\f061";
+            display: inline-block;
+            // height: 100%;
+            // width: 60px;
+            font-family: "Font Awesome 5 Free";
+            text-align: center;
+            z-index: 2;
+            left: auto;
+            right: 6%;
+            font-weight: 900;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 30%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: 1;
+            right: -18px;
+            top: 0;
+            margin: -5px 0 0 -5px;
+            transform-origin: 0 0;
+            transform: rotate(-20deg);
+            transition: all 0.3s;
+
+            &:hover {
+                width: 40%;
+            }
+        }
+    }
+
+    .info {
+        width: 60%;
+        margin: 7vh auto 4vh;
+        display: flex;
+        justify-content: space-between;
+
+        .some {
+            flex-basis: 50%;
+            display: flex;
+            justify-content: space-around;
+
+            a {
+                color: #000;
+            }
+
+            i {
+                // display: inline-block;
+                font-size: 3em;
+            }
+        }
+
+        p {
+            flex-basis: 35%;
+            font-family: $font-roboto;
+            font-size: .7em;
+
+            i {
+                font-size: 1em;
+            }
+        }
+    }
+}

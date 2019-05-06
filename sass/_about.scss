@@ -1,7 +1,7 @@
 .about {
     width: 80vw;
     margin: 5vh auto;
-    color: $dark-gray;
+    color: $dark-grey;
 
     @include sm {
         width: 70%;
@@ -22,9 +22,7 @@
     }
 
     h1 {
-        margin-bottom: 3vh;
-        text-align: center;
-        font-family: 'Mr Dafoe', cursive;
+        @include title;
 
         @include sm {
             margin-bottom: 5vh;
