@@ -1,0 +1,94 @@
+.projects {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    background-color: #efefef;
+
+    h1 {
+        @include title;
+
+        @include sm {
+            margin-bottom: 5vh;
+        }
+
+        @include md {
+            margin-bottom: 2vh;
+            font-size: 1.8em;
+        }
+    }
+
+    .gallery {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+        color: #000;
+
+        .project {
+            position: relative;
+            flex-basis: 100%;
+            margin-bottom: 3vh;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                //border: 5px solid white;
+                // border-radius: 1px;
+                opacity: .9;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .frame {
+                height: 70%;
+                width: 80%;
+                padding: 3% 3% 3% 7%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(235, 206, 208, 0.90);
+
+                h2 {
+                    margin-bottom: 2%;
+                    font-family: $font-oswald;
+                    font-size: 1.2em;
+                    text-align: center;
+                    letter-spacing: 1px;
+                }
+
+                p {
+                    font-family: $font-roboto;
+                    font-size: .8em;
+                    line-height: 1.4em;
+                    letter-spacing: .3px;
+                }
+
+                .preview {
+                    position: absolute;
+                    bottom: 7%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 35%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0 auto;
+
+                    a {
+                        color: #000;
+                    }
+
+                    i {
+                        flex-basis: 40%;
+                        font-size: 1.7em;
+                    }
+
+                    .fa-search {
+                        transform: scaleX(-1);
+                    }
+                }
+            }
+        }
+
+
+    }
+}
