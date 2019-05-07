@@ -1,108 +1,211 @@
 footer {
-    h1 {
-        @include title
-    }
 
     padding: 5vh 0;
     background-color: $pink;
 
-    form {
-        width: 70%;
-        margin: 0 auto;
+    @include md {
+        padding: 3vh 0;
+    }
 
-        textarea {
-            resize: none;
+    @include lg {
+        padding-top: 6vh;
+        padding-bottom: 6vh;
+    }
+
+    h1 {
+        @include title;
+
+        @include sm {
+            padding: 10vh 0;
         }
 
-        input,
-        textarea {
-            width: 100%;
-            background: none;
-            padding: 10px 10px 10px 5px;
-            display: block;
-            border: none;
-            border-bottom: 1px solid $dark-grey;
-            font-family: $font-roboto;
-            font-size: .7em;
+        @include md {
+            padding: 3vh 0;
+            font-size: 1.8em;
+        }
+
+        @include lg {
+            margin-bottom: 5vh;
         }
     }
 
-    button {
-        position: relative;
-        display: block;
-        width: 70%;
-        margin: 3vh auto;
-        border: none;
-        padding: 2vh 10vw;
-        overflow: hidden;
-        background-color: black;
-        color: #fff;
-        text-transform: uppercase;
-        font-family: $font-oswald;
-        letter-spacing: 1px;
+    .footer-content {
 
-        &::before {
-            position: absolute;
-            content: "\f061";
-            display: inline-block;
-            // height: 100%;
-            // width: 60px;
-            font-family: "Font Awesome 5 Free";
-            text-align: center;
-            z-index: 2;
-            left: auto;
-            right: 6%;
-            font-weight: 900;
+        @include lg {
+            display: flex;
+            width: 60%;
+            margin: 0 auto;
+            justify-content: space-between;
         }
 
-        &::after {
-            content: '';
-            position: absolute;
-            width: 30%;
-            height: 200%;
-            background: rgba(255, 255, 255, 0.2);
-            z-index: 1;
-            right: -18px;
-            top: 0;
-            margin: -5px 0 0 -5px;
-            transform-origin: 0 0;
-            transform: rotate(-20deg);
-            transition: all 0.3s;
+        .footer-left {
 
-            &:hover {
+            @include lg {
+                flex-basis: 60%;
+            }
+
+            form {
+                width: 70%;
+                margin: 0 auto;
+
+                @include sm {
+                    width: 50%;
+                }
+
+                textarea {
+                    resize: none;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    background: none;
+                    padding: 10px 10px 10px 5px;
+                    display: block;
+                    border: none;
+                    border-bottom: 1px solid $dark-grey;
+                    font-family: $font-roboto;
+                    font-size: .7em;
+
+                    @include md {
+                        font-size: .8em;
+                    }
+                }
+
+                @include lg {
+                    width: 75%;
+                }
+            }
+
+
+            button {
+                position: relative;
+                display: block;
+                width: 70%;
+                margin: 3vh auto;
+                border: none;
+                padding: 2vh 10vw;
+                overflow: hidden;
+                background-color: black;
+                color: #fff;
+                text-transform: uppercase;
+                font-family: $font-oswald;
+                letter-spacing: 1px;
+                text-align: center;
+
+                @include sm {
+                    width: 50%;
+                    margin-top: 6vh;
+                }
+
+                @include md {
+                    margin-top: 2vh;
+                }
+
+                @include lg {
+                    padding: 2vh 5vw;
+                    margin-bottom: 0;
+                    width: 75%;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "\f061";
+                    display: inline-block;
+                    // height: 100%;
+                    // width: 60px;
+                    font-family: "Font Awesome 5 Free";
+                    text-align: center;
+                    z-index: 2;
+                    left: auto;
+                    right: 6%;
+                    font-weight: 900;
+
+                    @include sm {
+                        right: 10%;
+                    }
+
+                    @include lg {
+                        right: 7%;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 30%;
+                    height: 200%;
+                    background: rgba(255, 255, 255, 0.2);
+                    z-index: 1;
+                    right: -18px;
+                    top: 0;
+                    margin: -5px 0 0 -5px;
+                    transform-origin: 0 0;
+                    transform: rotate(-20deg);
+                    transition: all 0.3s;
+
+                    &:hover {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+
+        .info {
+            width: 60%;
+            margin: 7vh auto 4vh;
+            display: flex;
+            justify-content: space-between;
+
+            @include sm {
                 width: 40%;
             }
-        }
-    }
 
-    .info {
-        width: 60%;
-        margin: 7vh auto 4vh;
-        display: flex;
-        justify-content: space-between;
-
-        .some {
-            flex-basis: 50%;
-            display: flex;
-            justify-content: space-around;
-
-            a {
-                color: #000;
+            @include md {
+                width: 35%;
+                margin-top: 4vh;
             }
 
-            i {
-                // display: inline-block;
-                font-size: 3em;
+            @include lg {
+                margin: 0 0;
+                justify-content: space-around;
+                align-items: flex-end;
             }
-        }
 
-        p {
-            flex-basis: 35%;
-            font-family: $font-roboto;
-            font-size: .7em;
+            .some {
+                flex-basis: 50%;
+                display: flex;
+                justify-content: space-around;
 
-            i {
-                font-size: 1em;
+
+                @include lg {
+                    flex-basis: 40%;
+                }
+
+                a {
+                    color: #000;
+                }
+
+                i {
+                    // display: inline-block;
+                    font-size: 3em;
+                }
+            }
+
+            p {
+                flex-basis: 35%;
+                padding-top: 2vh;
+                font-family: $font-roboto;
+                font-size: .7em;
+
+                @include md {
+                    flex-basis: 40%;
+                    padding-top: 1vh;
+                }
+
+                i {
+                    font-size: 1em;
+                }
             }
         }
     }

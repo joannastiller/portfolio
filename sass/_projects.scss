@@ -3,6 +3,21 @@
     padding-bottom: 3vh;
     background-color: #efefef;
 
+    @include sm {
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+
+    @include md {
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+
+    @include lg {
+        padding-top: 8vh;
+        padding-bottom: 8vh;
+    }
+
     h1 {
         @include title;
 
@@ -14,6 +29,10 @@
             margin-bottom: 2vh;
             font-size: 1.8em;
         }
+
+        @include lg {
+            margin-bottom: 5vh;
+        }
     }
 
     .gallery {
@@ -24,10 +43,36 @@
         flex-wrap: wrap;
         color: #000;
 
+        @include sm {
+            width: 70%;
+        }
+
+        @include md {
+            width: 80%;
+            justify-content: space-between;
+        }
+
+        @include lg {
+            width: 90%;
+        }
+
         .project {
             position: relative;
             flex-basis: 100%;
             margin-bottom: 3vh;
+
+            @include sm {
+                margin-bottom: 10vh;
+            }
+
+            @include md {
+                flex-basis: 47%;
+                margin-bottom: 4vh;
+            }
+
+            @include lg {
+                flex-basis: 23%;
+            }
 
             img {
                 max-width: 100%;
@@ -41,12 +86,21 @@
             .frame {
                 height: 70%;
                 width: 80%;
-                padding: 3% 3% 3% 7%;
+                padding: 3% 7% 3% 7%;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 background-color: rgba(235, 206, 208, 0.90);
+
+                @include sm {
+                    width: 70%;
+                }
+
+                @include md {
+                    width: 80%;
+                    padding: 3% 5% 3% 5%;
+                }
 
                 h2 {
                     margin-bottom: 2%;
@@ -54,6 +108,17 @@
                     font-size: 1.2em;
                     text-align: center;
                     letter-spacing: 1px;
+
+                    @include sm {
+                        margin-top: 5%;
+                        margin-bottom: 5%;
+                    }
+
+                    @include md {
+                        margin-top: 3%;
+                        margin-bottom: 3%;
+                        font-size: 1em;
+                    }
                 }
 
                 p {
@@ -61,6 +126,16 @@
                     font-size: .8em;
                     line-height: 1.4em;
                     letter-spacing: .3px;
+
+                    @include sm {
+                        font-size: .9em;
+                        line-height: 1.6em;
+                    }
+
+                    @include md {
+                        font-size: .7em;
+                        line-height: 1.4em;
+                    }
                 }
 
                 .preview {
@@ -73,6 +148,14 @@
                     justify-content: space-between;
                     margin: 0 auto;
 
+                    @include sm {
+                        bottom: 10%;
+                    }
+
+                    @include lg {
+                        bottom: 5%;
+                    }
+
                     a {
                         color: #000;
                     }
@@ -80,6 +163,10 @@
                     i {
                         flex-basis: 40%;
                         font-size: 1.7em;
+
+                        @include md {
+                            font-size: 1.4em;
+                        }
                     }
 
                     .fa-search {
