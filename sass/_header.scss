@@ -30,26 +30,26 @@ header {
     // Menu plus main writing
 
     .header-text {
-
-        position: absolute;
-        top: 25vh;
-        left: 20vw;
-        right: 25vw;
+        padding-top: 25vh;
+        margin: 0 auto;
+        max-width: 50vw;
 
         @include sm {
-            display: flex;
-            top: 8vh;
-            left: 15vw;
+            margin-left: 5vw;
+            padding-top: 10vh;
         }
 
         @include md {
-            top: 6vh;
-            left: 12vw;
+            max-width: 100%;
+            margin-left: 10vw;
+
         }
 
         @include lg {
-            top: 13vh;
-            left: 13vw;
+            max-width: 75%;
+            margin-left: 13vw;
+            padding-top: 15vh;
+
         }
 
         nav {
@@ -91,17 +91,21 @@ header {
             align-items: flex-end;
             color: #fff;
 
+
             @include sm {
-                padding-left: 10vw;
+                padding-left: 0vw;
             }
 
             @include md {
-                padding-top: 15vh;
+                padding-top: 5vh;
+                margin-right: 30vw;
             }
 
             @include lg {
+                margin-top: -22vh;
+                margin-right: 33vw;
                 padding-top: 0;
-                padding-left: 12vw;
+                padding-left: 7vw;
             }
 
             h1 {

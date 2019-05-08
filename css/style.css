@@ -40,33 +40,30 @@ header .burger {
 }
 
 header .header-text {
-  position: absolute;
-  top: 25vh;
-  left: 20vw;
-  right: 25vw;
+  padding-top: 25vh;
+  margin: 0 auto;
+  max-width: 50vw;
 }
 
 @media (min-width: 576px) {
   header .header-text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    top: 8vh;
-    left: 15vw;
+    margin-left: 5vw;
+    padding-top: 10vh;
   }
 }
 
 @media (min-width: 768px) {
   header .header-text {
-    top: 6vh;
-    left: 12vw;
+    max-width: 100%;
+    margin-left: 10vw;
   }
 }
 
 @media (min-width: 992px) {
   header .header-text {
-    top: 13vh;
-    left: 13vw;
+    max-width: 75%;
+    margin-left: 13vw;
+    padding-top: 15vh;
   }
 }
 
@@ -119,20 +116,23 @@ header .header-text .headline {
 
 @media (min-width: 576px) {
   header .header-text .headline {
-    padding-left: 10vw;
+    padding-left: 0vw;
   }
 }
 
 @media (min-width: 768px) {
   header .header-text .headline {
-    padding-top: 15vh;
+    padding-top: 5vh;
+    margin-right: 30vw;
   }
 }
 
 @media (min-width: 992px) {
   header .header-text .headline {
+    margin-top: -22vh;
+    margin-right: 33vw;
     padding-top: 0;
-    padding-left: 12vw;
+    padding-left: 7vw;
   }
 }
 
@@ -325,6 +325,7 @@ header .header-text .headline h2 {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: 3vh;
+  display: none;
 }
 
 @media (min-width: 576px) {
@@ -455,11 +456,11 @@ header .header-text .headline h2 {
 
 .projects .gallery .project .frame .preview a {
   color: #000;
+  text-decoration: none;
 }
 
 .projects .gallery .project .frame .preview i {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  display: inline-block;
   font-size: 1.7em;
 }
 
@@ -472,6 +473,30 @@ header .header-text .headline h2 {
 .projects .gallery .project .frame .preview .fa-search {
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
+}
+
+.projects .gallery .project .frame .preview.single {
+  width: 10%;
+}
+
+.projects #loadMore {
+  display: inline-block;
+  margin: 3vh auto;
+  border: none;
+  padding: 2vh 10vw;
+  background-color: black;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.projects #loadMore:hover {
+  color: #ebced0;
 }
 
 footer {
@@ -549,6 +574,12 @@ footer .footer-content .footer-left form {
   }
 }
 
+@media (min-width: 992px) {
+  footer .footer-content .footer-left form {
+    width: 75%;
+  }
+}
+
 footer .footer-content .footer-left form textarea {
   resize: none;
 }
@@ -563,6 +594,28 @@ footer .footer-content .footer-left form textarea {
   border-bottom: 1px solid #b3b3af;
   font-family: "Roboto", sans-serif;
   font-size: .7em;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+footer .footer-content .footer-left form input:focus::-webkit-input-placeholder,
+footer .footer-content .footer-left form textarea:focus::-webkit-input-placeholder {
+  opacity: 0.1;
+}
+
+footer .footer-content .footer-left form input:focus:-ms-input-placeholder,
+footer .footer-content .footer-left form textarea:focus:-ms-input-placeholder {
+  opacity: 0.1;
+}
+
+footer .footer-content .footer-left form input:focus::-ms-input-placeholder,
+footer .footer-content .footer-left form textarea:focus::-ms-input-placeholder {
+  opacity: 0.1;
+}
+
+footer .footer-content .footer-left form input:focus::placeholder,
+footer .footer-content .footer-left form textarea:focus::placeholder {
+  opacity: 0.1;
 }
 
 @media (min-width: 768px) {
@@ -572,16 +625,10 @@ footer .footer-content .footer-left form textarea {
   }
 }
 
-@media (min-width: 992px) {
-  footer .footer-content .footer-left form {
-    width: 75%;
-  }
-}
-
-footer .footer-content .footer-left button {
+footer .footer-content .footer-left form button {
   position: relative;
   display: block;
-  width: 70%;
+  width: 100%;
   margin: 3vh auto;
   border: none;
   padding: 2vh 10vw;
@@ -595,27 +642,27 @@ footer .footer-content .footer-left button {
 }
 
 @media (min-width: 576px) {
-  footer .footer-content .footer-left button {
-    width: 50%;
-    margin-top: 6vh;
+  footer .footer-content .footer-left form button {
+    margin-top: 4vh;
+    padding: 4vh 0vw;
   }
 }
 
 @media (min-width: 768px) {
-  footer .footer-content .footer-left button {
+  footer .footer-content .footer-left form button {
+    width: 100%;
     margin-top: 2vh;
+    padding: 2vh 0vw;
   }
 }
 
 @media (min-width: 992px) {
-  footer .footer-content .footer-left button {
-    padding: 2vh 5vw;
+  footer .footer-content .footer-left form button {
     margin-bottom: 0;
-    width: 75%;
   }
 }
 
-footer .footer-content .footer-left button::before {
+footer .footer-content .footer-left form button::before {
   position: absolute;
   content: "\f061";
   display: inline-block;
@@ -628,18 +675,18 @@ footer .footer-content .footer-left button::before {
 }
 
 @media (min-width: 576px) {
-  footer .footer-content .footer-left button::before {
+  footer .footer-content .footer-left form button::before {
     right: 10%;
   }
 }
 
 @media (min-width: 992px) {
-  footer .footer-content .footer-left button::before {
-    right: 7%;
+  footer .footer-content .footer-left form button::before {
+    right: 10%;
   }
 }
 
-footer .footer-content .footer-left button::after {
+footer .footer-content .footer-left form button::after {
   content: '';
   position: absolute;
   width: 30%;
@@ -653,12 +700,12 @@ footer .footer-content .footer-left button::after {
           transform-origin: 0 0;
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
-footer .footer-content .footer-left button::after:hover {
-  width: 40%;
+@media (min-width: 576px) {
+  footer .footer-content .footer-left form button::after {
+    right: -10px;
+  }
 }
 
 footer .footer-content .info {
@@ -674,7 +721,8 @@ footer .footer-content .info {
 
 @media (min-width: 576px) {
   footer .footer-content .info {
-    width: 40%;
+    width: 30%;
+    margin-top: 15vh;
   }
 }
 
@@ -724,7 +772,6 @@ footer .footer-content .info .some i {
 footer .footer-content .info p {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
-  padding-top: 2vh;
   font-family: "Roboto", sans-serif;
   font-size: .7em;
 }

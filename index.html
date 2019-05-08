@@ -51,7 +51,7 @@
     </header>
     <!-- end of header -->
 
-    <section class="about">
+    <section id="menu-about" class="about">
         <h1>O mnie</h1>
         <p>Przez ostatnie 10 lat zajmowałam się m.in. zarządzaniem stronami internetowymi za pomocą CMS-ów. Tworzyłam
             treść, dopasowywałam układ, szukałam rozwiązań. Jednocześnie uwielbiam pracę z obrazem: grafiką, zdjęciami,
@@ -64,7 +64,8 @@
             W wolnych chwilach piszę o podróżach i dopracowuję stronę mojego bloga.</p>
     </section>
 
-    <section class="projects">
+    <!-- projects section -->
+    <section id="menu-projects" class="projects">
         <h1>Projekty</h1>
 
         <div class="gallery">
@@ -86,18 +87,19 @@
             <!-- end of a single project -->
 
             <!-- single project -->
-            <div class="project"><img src="images/intotheunknown-2.jpg" alt="">
+            <div class="project blogBox"><img src="images/intotheunknown.jpg" alt="">
                 <div class="frame">
                     <h2>Blog</h2>
                     <p>Strona oparta na WordPressie, zbudowana z wykorzystaniem page buildera Elementor.</p>
 
-                    <div class="preview"><a href="http://intotheunknown.pl/"><i class="fas fa-search"></i></a></div>
+                    <div class="preview single"><a href="http://intotheunknown.pl/"><i class="fas fa-search"></i></a>
+                    </div>
                 </div>
             </div>
             <!-- end of a single project -->
 
             <!-- single project -->
-            <div class="project">
+            <div class="project blogBox">
                 <img src="images/psd_to_html.jpg" alt="">
                 <div class="frame">
                     <h2>PSD to HTML</h2>
@@ -112,7 +114,7 @@
             <!-- end of a single project -->
 
             <!-- single project -->
-            <div class="project">
+            <div class="project blogBox">
                 <img src="images/ecmc.jpg" alt="">
                 <div class="frame">
                     <h2>ECMC</h2>
@@ -127,7 +129,7 @@
             <!-- end of a single project -->
 
             <!-- single project -->
-            <div class="project">
+            <div class="project blogBox">
                 <img src="images/ecmc.jpg" alt="">
                 <div class="frame">
                     <h2>ECMC</h2>
@@ -142,7 +144,7 @@
             <!-- end of a single project -->
 
             <!-- single project -->
-            <div class="project">
+            <div class="project blogBox">
                 <img src="images/ecmc.jpg" alt="">
                 <div class="frame">
                     <h2>ECMC</h2>
@@ -157,7 +159,7 @@
             <!-- end of a single project -->
 
             <!-- single project -->
-            <div class="project">
+            <div class="project blogBox">
                 <img src="images/ecmc.jpg" alt="">
                 <div class="frame">
                     <h2>ECMC</h2>
@@ -172,7 +174,7 @@
             <!-- end of a single project -->
 
             <!-- single project -->
-            <div class="project">
+            <div class="project blogBox">
                 <img src="images/ecmc.jpg" alt="">
                 <div class="frame">
                     <h2>ECMC</h2>
@@ -186,6 +188,7 @@
             </div>
             <!-- end of a single project -->
 
+            <a id="loadMore" href="#">Pokaż więcej</a>
         </div>
 
     </section>
@@ -199,19 +202,20 @@
     <!-- end of the technology stack section -->
 
     <!-- footer -->
-    <footer>
+    <footer id="menu-contact">
 
         <h1>Kontakt</h1>
 
         <div class="footer-content">
             <div class="footer-left">
-                <form action="">
-                    <input type="text" id="fname" placeholder="imię" required>
-                    <input type="email" id="email" placeholder="adres e-mail" required>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="tutaj wpisz wiadomość"></textarea>
-                    <!-- <input type="submit" id="submit" value="Wyślij wiadomość"> -->
+                <form autocomplete="off" action="">
+                    <input type="text" id="fname" placeholder="imię" maxlength="50" required>
+                    <input type="email" id="email" placeholder="adres e-mail" maxlength="50" required>
+                    <textarea name="message" id="message" cols="30" rows="10" maxlength="6000" required
+                        placeholder="tutaj wpisz wiadomość"></textarea>
+                    <button type="submit">Wyślij wiadomość</button>
                 </form>
-                <button type="submit">Wyślij wiadomość</button>
+
             </div>
             <div class="info">
                 <div class="some">
@@ -224,6 +228,7 @@
     </footer>
     <!-- end of the footer -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 
