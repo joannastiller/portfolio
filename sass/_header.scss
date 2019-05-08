@@ -18,6 +18,14 @@ header {
         font-size: 2em;
         color: #fff;
 
+        i {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
         @include sm {
             right: 5vw;
         }

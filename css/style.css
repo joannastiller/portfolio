@@ -27,6 +27,14 @@ header .burger {
   color: #fff;
 }
 
+header .burger i {
+  display: none;
+}
+
+header .burger .active {
+  display: block;
+}
+
 @media (min-width: 576px) {
   header .burger {
     right: 5vw;
