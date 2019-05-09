@@ -177,7 +177,7 @@
                     }
                 }
 
-                .preview.single {
+                .preview.preview-only {
                     width: 10%;
                 }
             }
@@ -198,8 +198,17 @@
         text-decoration: none;
         transition: .3s;
 
+        @include sm {
+            padding-top: 5vh;
+            padding-bottom: 5vh;
+        }
+
+        @include md {
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+        }
+
         &:hover {
-            // background-color: rgb(53, 53, 53);
             color: $pink;
         }
 

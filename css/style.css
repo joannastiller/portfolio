@@ -79,9 +79,13 @@ header .header-text nav {
   display: none;
 }
 
+header .header-text nav .active {
+  display: block;
+}
+
 @media (min-width: 768px) {
   header .header-text nav {
-    display: block;
+    display: inline-block;
     color: #fff;
     font-family: "Oswald", sans-serif;
     font-size: 1.5em;
@@ -483,7 +487,7 @@ header .header-text .headline h2 {
           transform: scaleX(-1);
 }
 
-.projects .gallery .project .frame .preview.single {
+.projects .gallery .project .frame .preview.preview-only {
   width: 10%;
 }
 
@@ -503,8 +507,123 @@ header .header-text .headline h2 {
   transition: .3s;
 }
 
+@media (min-width: 576px) {
+  .projects #loadMore {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects #loadMore {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+}
+
 .projects #loadMore:hover {
   color: #ebced0;
+}
+
+.stack {
+  width: 90%;
+  margin: 5vh auto 0vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .stack {
+    width: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  .stack {
+    width: 50%;
+  }
+}
+
+.stack h1 {
+  padding: 1vh 0 3vh;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'Mr Dafoe', cursive;
+  margin-bottom: 4vh;
+}
+
+.stack h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: .9em;
+  letter-spacing: 1px;
+}
+
+.stack .bounce-up {
+  opacity: 0;
+  -webkit-transform: translate3d(0px, 100px, 0px);
+          transform: translate3d(0px, 100px, 0px);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.stack .bounce-up.in-view {
+  opacity: 1;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
+  -webkit-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
+}
+
+.stack .well,
+.stack .learning,
+.stack .worked-with {
+  margin: 3vh auto 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.stack .well i,
+.stack .learning i,
+.stack .worked-with i {
+  font-size: 3em;
+}
+
+.stack .well i {
+  -ms-flex-preferred-size: 19%;
+      flex-basis: 19%;
+}
+
+.stack .learning {
+  width: 60%;
+}
+
+@media (min-width: 992px) {
+  .stack .learning {
+    width: 50%;
+  }
+}
+
+.stack .learning i {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+}
+
+.stack .worked-with {
+  width: 60%;
+}
+
+@media (min-width: 992px) {
+  .stack .worked-with {
+    width: 50%;
+  }
+}
+
+.stack .worked-with i {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
 }
 
 footer {
@@ -794,5 +913,45 @@ footer .footer-content .info p {
 
 footer .footer-content .info p i {
   font-size: 1em;
+}
+
+.totop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 25px;
+  width: 25px;
+  background-color: #dedede;
+  border-radius: 50%;
+  text-align: center;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.totop:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.totop i {
+  color: #fff;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+@media (min-width: 768px) {
+  .totop i {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+@media (min-width: 768px) {
+  .totop {
+    bottom: 30px;
+    right: 30px;
+    height: 35px;
+    width: 35px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

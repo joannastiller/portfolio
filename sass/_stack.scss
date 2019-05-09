@@ -1,0 +1,79 @@
+.stack {
+    width: 90%;
+    margin: 5vh auto 0vh;
+    text-align: center;
+    overflow: hidden;
+
+    @include md {
+        width: 60%;
+    }
+
+    @include lg {
+        width: 50%;
+    }
+
+    h1 {
+        @include title;
+        margin-bottom: 4vh;
+    }
+
+    h2 {
+        font-family: $font-oswald;
+        font-size: .9em;
+        letter-spacing: 1px;
+    }
+
+    .bounce-up {
+        opacity: 0;
+        transform: translate3d(0px, 100px, 0px);
+        backface-visibility: hidden;
+    }
+
+    .bounce-up.in-view {
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+        transition: all 700ms ease-out;
+    }
+
+    .well,
+    .learning,
+    .worked-with {
+        margin: 3vh auto 7vh;
+        display: flex;
+        flex-wrap: wrap;
+
+        i {
+            font-size: 3em;
+        }
+    }
+
+    .well {
+        i {
+            flex-basis: 19%;
+        }
+    }
+
+    .learning {
+        width: 60%;
+
+        @include lg {
+            width: 50%;
+        }
+
+        i {
+            flex-basis: 32%;
+        }
+    }
+
+    .worked-with {
+        width: 60%;
+
+        @include lg {
+            width: 50%;
+        }
+
+        i {
+            flex-basis: 32%;
+        }
+    }
+}

@@ -63,8 +63,12 @@ header {
         nav {
             display: none;
 
-            @include md {
+            .active {
                 display: block;
+            }
+
+            @include md {
+                display: inline-block;
                 color: #fff;
                 font-family: $font-oswald;
                 font-size: 1.5em;
