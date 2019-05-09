@@ -1,0 +1,33 @@
+.totop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 30px;
+    width: 30px;
+    background-color: #dedede;
+    border-radius: 50%;
+    text-align: center;
+    transition: .2s;
+
+    &:hover {
+        transform: scale(1.1)
+    }
+
+    i {
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+
+        @include md {
+            font-size: 25px;
+            line-height: 35px;
+        }
+    }
+
+    @include md {
+        bottom: 30px;
+        right: 30px;
+        height: 35px;
+        width: 35px;
+    }
+}
