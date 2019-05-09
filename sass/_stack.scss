@@ -4,23 +4,57 @@
     text-align: center;
     overflow: hidden;
 
+    @include sm {
+        width: 70%;
+    }
+
     @include md {
         width: 60%;
+        margin-top: 4vh;
     }
 
     @include lg {
         width: 50%;
+        margin-bottom: 2vh;
     }
 
     h1 {
         @include title;
         margin-bottom: 4vh;
+
+        @include sm {
+            margin-bottom: 7vh;
+            margin-top: 5vh;
+        }
+
+        @include md {
+            margin-bottom: 2vh;
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+
+        @include lg {
+            margin-top: 2vh;
+            margin-bottom: 5vh;
+        }
     }
 
     h2 {
         font-family: $font-oswald;
         font-size: .9em;
         letter-spacing: 1px;
+
+        @include sm {
+            margin-bottom: 5vh;
+        }
+
+        @include md {
+            margin-bottom: 2vh;
+        }
+
+        @include lg {
+            margin-bottom: 3vh;
+        }
     }
 
     .bounce-up {
@@ -41,6 +75,18 @@
         margin: 3vh auto 7vh;
         display: flex;
         flex-wrap: wrap;
+
+        @include sm {
+            margin: 3vh auto 12vh;
+        }
+
+        @include md {
+            margin-bottom: 6vh;
+        }
+
+        @include lg {
+            margin-bottom: 8vh;
+        }
 
         i {
             font-size: 3em;

@@ -79,10 +79,6 @@ header .header-text nav {
   display: none;
 }
 
-header .header-text nav .active {
-  display: block;
-}
-
 @media (min-width: 768px) {
   header .header-text nav {
     display: inline-block;
@@ -110,6 +106,14 @@ header .header-text nav ul {
     transition: .3s;
     cursor: pointer;
   }
+}
+
+header .header-text nav.active {
+  display: block;
+  position: absolute;
+  top: 5%;
+  right: 0%;
+  z-index: 3;
 }
 
 header .header-text .headline {
@@ -532,15 +536,23 @@ header .header-text .headline h2 {
   overflow: hidden;
 }
 
+@media (min-width: 576px) {
+  .stack {
+    width: 70%;
+  }
+}
+
 @media (min-width: 768px) {
   .stack {
     width: 60%;
+    margin-top: 4vh;
   }
 }
 
 @media (min-width: 992px) {
   .stack {
     width: 50%;
+    margin-bottom: 2vh;
   }
 }
 
@@ -552,10 +564,50 @@ header .header-text .headline h2 {
   margin-bottom: 4vh;
 }
 
+@media (min-width: 576px) {
+  .stack h1 {
+    margin-bottom: 7vh;
+    margin-top: 5vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .stack h1 {
+    margin-bottom: 2vh;
+    margin-top: 0;
+    font-size: 1.8em;
+  }
+}
+
+@media (min-width: 992px) {
+  .stack h1 {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+  }
+}
+
 .stack h2 {
   font-family: "Oswald", sans-serif;
   font-size: .9em;
   letter-spacing: 1px;
+}
+
+@media (min-width: 576px) {
+  .stack h2 {
+    margin-bottom: 5vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .stack h2 {
+    margin-bottom: 2vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .stack h2 {
+    margin-bottom: 3vh;
+  }
 }
 
 .stack .bounce-up {
@@ -583,6 +635,30 @@ header .header-text .headline h2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media (min-width: 576px) {
+  .stack .well,
+  .stack .learning,
+  .stack .worked-with {
+    margin: 3vh auto 12vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .stack .well,
+  .stack .learning,
+  .stack .worked-with {
+    margin-bottom: 6vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .stack .well,
+  .stack .learning,
+  .stack .worked-with {
+    margin-bottom: 8vh;
+  }
 }
 
 .stack .well i,
@@ -919,8 +995,8 @@ footer .footer-content .info p i {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
   background-color: #dedede;
   border-radius: 50%;
   text-align: center;
@@ -935,8 +1011,8 @@ footer .footer-content .info p i {
 
 .totop i {
   color: #fff;
-  font-size: 15px;
-  line-height: 25px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 @media (min-width: 768px) {
