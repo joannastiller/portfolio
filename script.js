@@ -1,19 +1,3 @@
-// SHOW MORE BUTTON
-
-$(function () {
-    $("div.project").slice(0, 4).show();
-    $("#loadMore").on('click', function (e) {
-        e.preventDefault();
-        $("div.project:hidden").slice(0, 4).slideDown();
-        if ($("div.project:hidden").length == 0) {
-            $("#loadMore").fadeOut('slow');
-        }
-        $('html,body').animate({
-            scrollTop: $(this).offset().top - 200
-        }, 1500);
-    });
-});
-
 // SCROLL DOWN MENU
 
 const burger = document.querySelector("i.fa-bars");
@@ -42,7 +26,23 @@ $('nav ul li').on('click', function () {
     $('nav').removeClass('active');
 })
 
-//Back to top button
+// SHOW MORE BUTTON
+
+$(function () {
+    $("div.project").slice(0, 4).show();
+    $("#loadMore").on('click', function (e) {
+        e.preventDefault();
+        $("div.project:hidden").slice(0, 4).slideDown();
+        if ($("div.project:hidden").length == 0) {
+            $("#loadMore").fadeOut('slow');
+        }
+        $('html,body').animate({
+            scrollTop: $(this).offset().top - 200
+        }, 1500);
+    });
+});
+
+//BACK TO TOP
 
 $('.totop').click(function () {
     $('body,html').animate({
@@ -59,7 +59,7 @@ $(window).scroll(function () {
     }
 });
 
-//Stack animation
+//STACK ANIMATION
 
 var $animation_elements = $('.animation-element');
 var $window = $(window);

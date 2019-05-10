@@ -94,9 +94,22 @@ header {
         nav.active {
             display: block;
             position: absolute;
-            top: 5%;
-            right: 0%;
+            top: 5vh;
+            right: 20vw;
+            background-color: #fff;
+            font-family: $font-oswald;
             z-index: 3;
+            text-align: center;
+
+            li {
+                margin: 0 2vw;
+                padding: 1vh 7vw;
+                border-bottom: 1px solid $dark-grey;
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+            }
         }
 
         // Main writing
