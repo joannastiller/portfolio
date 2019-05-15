@@ -55,7 +55,7 @@ header {
 
         @include lg {
             max-width: 75%;
-            margin-left: 13vw;
+            margin-left: 15vw;
             padding-top: 15vh;
 
         }
@@ -131,10 +131,10 @@ header {
             }
 
             @include lg {
-                margin-top: -22vh;
-                margin-right: 33vw;
+                margin-top: -21vh;
+                margin-right: 37vw;
                 padding-top: 0;
-                padding-left: 7vw;
+                // padding-left: 7vw;
             }
 
             h1 {
