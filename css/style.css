@@ -48,6 +48,9 @@ header .burger .active {
 }
 
 header .header-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 25vh;
   margin: 0 auto;
   max-width: 50vw;
@@ -62,7 +65,7 @@ header .header-text {
 
 @media (min-width: 768px) {
   header .header-text {
-    max-width: 100%;
+    max-width: 80%;
     margin-left: 10vw;
   }
 }
@@ -145,20 +148,19 @@ header .header-text .headline {
 
 @media (min-width: 576px) {
   header .header-text .headline {
-    padding-left: 0vw;
+    padding-left: 20vw;
   }
 }
 
 @media (min-width: 768px) {
   header .header-text .headline {
-    padding-top: 5vh;
-    margin-right: 30vw;
+    padding-top: 18vh;
+    padding-left: 12vw;
   }
 }
 
 @media (min-width: 992px) {
   header .header-text .headline {
-    margin-top: -21vh;
     margin-right: 37vw;
     padding-top: 0;
   }

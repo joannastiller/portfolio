@@ -38,9 +38,11 @@ header {
     // Menu plus main writing
 
     .header-text {
+        display: flex;
         padding-top: 25vh;
         margin: 0 auto;
         max-width: 50vw;
+
 
         @include sm {
             margin-left: 5vw;
@@ -48,16 +50,14 @@ header {
         }
 
         @include md {
-            max-width: 100%;
+            max-width: 80%;
             margin-left: 10vw;
-
         }
 
         @include lg {
             max-width: 75%;
             margin-left: 15vw;
             padding-top: 15vh;
-
         }
 
         nav {
@@ -122,19 +122,17 @@ header {
 
 
             @include sm {
-                padding-left: 0vw;
+                padding-left: 20vw;
             }
 
             @include md {
-                padding-top: 5vh;
-                margin-right: 30vw;
+                padding-top: 18vh;
+                padding-left: 12vw;
             }
 
             @include lg {
-                margin-top: -21vh;
                 margin-right: 37vw;
                 padding-top: 0;
-                // padding-left: 7vw;
             }
 
             h1 {
