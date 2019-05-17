@@ -815,6 +815,11 @@ footer .footer-content .footer-left form textarea {
   transition: .5s;
 }
 
+footer .footer-content .footer-left form input:focus,
+footer .footer-content .footer-left form textarea:focus {
+  outline: none;
+}
+
 footer .footer-content .footer-left form input:focus::-webkit-input-placeholder,
 footer .footer-content .footer-left form textarea:focus::-webkit-input-placeholder {
   opacity: 0.1;
@@ -840,6 +845,16 @@ footer .footer-content .footer-left form textarea:focus::placeholder {
   footer .footer-content .footer-left form textarea {
     font-size: .8em;
   }
+}
+
+footer .footer-content .footer-left form .error {
+  border-color: #a88e90;
+}
+
+footer .footer-content .footer-left form .error-message {
+  color: #a88e90;
+  font-family: "Oswald", sans-serif;
+  font-size: .8em;
 }
 
 footer .footer-content .footer-left form button {

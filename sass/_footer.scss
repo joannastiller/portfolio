@@ -72,6 +72,16 @@ footer {
                     font-size: .7em;
                     transition: .5s;
 
+                    &:focus {
+                        outline: none;
+                    }
+
+                    // &:not(:focus):invalid {
+                    //     outline: 0;
+                    //     border: none;
+                    //     box-shadow: 0 0 1px 2px $dark-grey;
+                    // }
+
                     &:focus::placeholder {
                         opacity: 0.1;
                     }
@@ -79,6 +89,16 @@ footer {
                     @include md {
                         font-size: .8em;
                     }
+                }
+
+                .error {
+                    border-color: #a88e90;
+                }
+
+                .error-message {
+                    color: #a88e90;
+                    font-family: $font-oswald;
+                    font-size: .8em;
                 }
 
                 button {
